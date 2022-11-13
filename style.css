@@ -1,0 +1,71 @@
+body {
+  background-color: #1F2937;
+  font-family: "Karla", sans-serif;
+  color: white;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 25vh;
+}
+
+h1 {
+  font-family: 800;
+  font-size: 4em;
+}
+
+.green-color {
+  color: #4adf86;
+}
+
+span {
+  display: block;
+}
+
+p {
+  color: #d5d4d8;
+  font-size: 2em;
+}
+
+button {
+  background-color: #10b981;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.7em;
+  font-family: "Karla", sans-serif;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3afbbb;
+  color: #273549;
+}
+
+.line {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 90%;
+  border-bottom: 2px solid #2f3e53;
+}
+
+#passwords-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.password-input {
+  background-color: #273549;
+  margin: 10px;
+  border: 1px solid #273549;
+  width: 211px;
+  height: 39px;
+  border-radius: 10px;
+  color: #55F991;
+  font-size: 1.8em;
+  text-align: center;
+}
