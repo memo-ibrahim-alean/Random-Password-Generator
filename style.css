@@ -1,5 +1,5 @@
 body {
-  background-color: #1F2937;
+  background-color: #1f2937;
   font-family: "Karla", sans-serif;
   color: white;
 }
@@ -29,6 +29,7 @@ p {
 }
 
 button {
+  display: block;
   background-color: #10b981;
   color: #ffffff;
   font-weight: 500;
@@ -38,6 +39,7 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 20px;
 }
 
 button:hover {
@@ -62,10 +64,10 @@ button:hover {
   background-color: #273549;
   margin: 10px;
   border: 1px solid #273549;
-  width: 211px;
+  width: 400px;
   height: 39px;
   border-radius: 10px;
-  color: #55F991;
+  color: #55f991;
   font-size: 1.8em;
   text-align: center;
 }

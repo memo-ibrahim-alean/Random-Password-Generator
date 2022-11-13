@@ -17,11 +17,12 @@
     <div class="container">
       <h1>Generate <span class="green-color">a random password</span></h1>
       <p>Never use an insecure password again.</p>
-      <button id="generate-btn">Generate passwords</button>
+      <button id="generate-btn" onclick="generatePassword()">Generate passwords</button>
+      <button id="generate-btn" onclick="reset()">Reset</button>
       <div class="line"></div>
       <div id="passwords-container">
-        <input type="text" name="password text" class="password-input" readonly/>
-        <input type="text" name="password text" class="password-input" readonly/>
+        <input type="text" name="password text" class="password-input" id="input1" readonly/>
+        <input type="text" name="password text" class="password-input"id="input2" readonly/>
       </div>
     </div>
     <script src="./script.js"></script>
