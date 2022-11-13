@@ -7,7 +7,7 @@ body {
 .container {
   width: 800px;
   margin: 0 auto;
-  margin-top: 25vh;
+  margin-top: 20vh;
 }
 
 h1 {
@@ -23,7 +23,8 @@ span {
   display: block;
 }
 
-p {
+p,
+label {
   color: #d5d4d8;
   font-size: 2em;
 }
@@ -60,14 +61,85 @@ button:hover {
   align-items: center;
 }
 
-.password-input {
+.password-input,
+#password-length {
   background-color: #273549;
   margin: 10px;
   border: 1px solid #273549;
-  width: 400px;
+  width: 300px;
   height: 39px;
   border-radius: 10px;
   color: #55f991;
-  font-size: 1.8em;
+  font-size: 1.5em;
   text-align: center;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#password-length {
+  display: block;
+  margin-top: 30px;
+  outline: none !important;
+  font-size: 1em;
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .container {
+    width: 95%;
+    margin-left: 3%;
+      margin-top: 4vh;
+  }
+
+  h1 {
+    font-size: 2.2em;
+  }
+
+  p {
+    color: #d5d4d8;
+    font-size: 1.2em;
+  }
+
+  .password-input,
+  #password-length {
+    display: block;
+    width: 300px;
+    height: 39px;
+    font-size: 1.2em;
+  }
+
+  button {
+    display: block;
+    font-size: 1.2em;
+  }
+
+  #passwords-container {
+    display: block;
+    /* margin: 0 auto; */
+    margin-left: 5%;
+  }
+
+  label {
+    font-size: 1.2em;
+  }
+}
+
+#copy-btn {
+  display: block;
+  margin: 20px auto;
 }

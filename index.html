@@ -17,13 +17,38 @@
     <div class="container">
       <h1>Generate <span class="green-color">a random password</span></h1>
       <p>Never use an insecure password again.</p>
-      <button id="generate-btn" onclick="generatePassword()">Generate passwords</button>
-      <button id="generate-btn" onclick="reset()">Reset</button>
+      <button id="generate-btn" onclick="generatePassword()">
+        Generate passwords
+      </button>
+      <button onclick="reset()">Reset</button>
+      <label for="password-length">
+        Enter password length ? (optional)
+        <input
+          type="number"
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          id="password-length"
+          maxlength="2"
+          required
+        />
+      </label>
       <div class="line"></div>
       <div id="passwords-container">
-        <input type="text" name="password text" class="password-input" id="input1" readonly/>
-        <input type="text" name="password text" class="password-input"id="input2" readonly/>
+        <input
+          type="text"
+          name="password text"
+          class="password-input"
+          id="input1"
+          readonly
+        />
+        <input
+          type="text"
+          name="password text"
+          class="password-input"
+          id="input2"
+          readonly
+        />
       </div>
+      <button onclick="myFunction()" id="copy-btn">Copy text</button>
     </div>
     <script src="./script.js"></script>
   </body>

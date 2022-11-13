@@ -7,35 +7,53 @@ let secondPassword = "";
 let generateButtonEl = document.getElementById("generate-btn");
 let firstInputEl = document.getElementById("input1");
 let secondInputEl = document.getElementById("input2");
+let passwordLengthEl = document.querySelector("#password-length")
+let inputLength = 15;
 
+passwordLengthEl.addEventListener("change", (event) => {
+  passwordLengthEl.value = event.target.value;
+  inputLength = parseInt(passwordLengthEl.value);
+});
 
-function generatePassword() {
-  for (let i = 0; i < characters.length; i++) {
-    let fristRandomIndex = Math.floor(Math.random() * characters.length);
-    let secondRandomIndex = Math.floor(Math.random() * characters.length);
+  function generatePassword() {
 
-    firstPassword += characters[fristRandomIndex];
-    secondPassword += characters[secondRandomIndex];
-
-    if (count === 15) {
-      firstInputEl.value = firstPassword;
-      secondInputEl.value = secondPassword;
-      count = 1;
-      firstPassword = "";
-      secondPassword = "";
-      break;
+    if(passwordLengthEl.value === "") {
+      inputLength = 15;
     }
 
-    count += 1;
+      for (let i = 0; i < characters.length; i++) {
+        let fristRandomIndex = Math.floor(Math.random() * characters.length);
+        let secondRandomIndex = Math.floor(Math.random() * characters.length);
+
+        firstPassword += characters[fristRandomIndex];
+        secondPassword += characters[secondRandomIndex];
+
+        if (inputLength < 10 || inputLength > 20) {
+          alert("please enter number from 10 - 20 !!!!");
+          reset();
+          break;
+        }
+
+        if (count === inputLength) {
+          firstInputEl.value = firstPassword;
+          secondInputEl.value = secondPassword;
+          count = 1;
+          firstPassword = "";
+          secondPassword = "";
+          break;
+        }
+
+        count += 1;
+      }
   }
-}
 
 
 function reset() {
   count = 1;
   firstPassword = "";
   secondPassword = "";
-    firstInputEl.value = "";
-    secondInputEl.value = "";
-
+  firstInputEl.value = "";
+  secondInputEl.value = "";
+  passwordLengthEl.value = "";
+  inputLength = 15;
 }
